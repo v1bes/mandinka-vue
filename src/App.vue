@@ -4,11 +4,15 @@
       <img src="./assets/logo.png">
     -->
       <h1>{{ msg }}</h1>
-      <ul id="list">
-        <li v-for="word in words">
+    <app-message></app-message>
+    <!--
+    <ul id="list">
+        <li v-for="word in ">
           {{ word.ger }} - {{ word.man }}
         </li>
       </ul>
+    -->
+
     <!--
       <h2>Essential Links</h2>
     <ul>
@@ -29,12 +33,16 @@
 </template>
 
 <script>
+import Message from './Message'
 export default {
   name: 'app',
   data () {
     return {
       msg: 'Kortanante?'
     }
+  },
+  components: {
+    'app-message': Message
   }
 }
 </script>
