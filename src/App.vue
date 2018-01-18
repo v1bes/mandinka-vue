@@ -1,8 +1,16 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
+    <!--
+      <img src="./assets/logo.png">
+    -->
+      <h1>{{ msg }}</h1>
+      <ul id="list">
+        <li v-for="word in words">
+          {{ word.ger }} - {{ word.man }}
+        </li>
+      </ul>
+    <!--
+      <h2>Essential Links</h2>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
       <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
@@ -16,6 +24,7 @@
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
+    -->
   </div>
 </template>
 
@@ -24,7 +33,7 @@ export default {
   name: 'app',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Kortanante?'
     }
   }
 }
